@@ -1,0 +1,25 @@
+{
+
+  "description": "Apply CSS and JS to the quiz application on cyberlearn.hes-so.ch to improve presentation for projector (best in 16:9)",
+  "manifest_version": 2,
+  "name": "cyberlearn-quiz-mode",
+  
+  "version": "1.0",
+  "homepage_url": "https://github.com/MediaComem/cyberlearn-quiz-for-beamer",
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "page_action": {
+    "default_icon": "icons/off.svg",
+    "browser_style": true
+  },
+  
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "*://cyberlearn.hes-so.ch/mod/evoting/*"
+  ]
+
+}

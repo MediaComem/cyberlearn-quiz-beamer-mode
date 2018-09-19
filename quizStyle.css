@@ -1,0 +1,89 @@
+/* Base */
+
+#region-main{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw !important;
+    min-height:100vh !important;
+    overflow-y: scroll !important;
+    height: 100% !important;
+    background: #fbfbfb;
+    z-index: 9999;
+}
+
+.region-main-header,
+.region_main_settings_menu_proxy,
+#divTitle,
+#divQrCode,
+span#maincontent,
+#region-main div[role=main] > h5,
+#banner-background,
+body > footer,
+section[class=hidden-print]{
+    display:none !important;
+}
+
+/* Title of the question */
+
+#divOptions{
+    padding-top:0px !important;
+}
+
+#questionName{
+    min-height:150px !important;
+    font-size: 3em !important;
+    word-break: initial !important;
+
+    border:none !important;
+
+    width: calc(100% - 350px) !important;
+    margin: 20px !important;
+    margin-top: 35px !important;
+}
+
+/* Answers */
+
+.optionText{
+    text-transform:initial !important;
+    background-color: rgb(25, 37, 80);
+}
+
+.optionText span{
+    word-wrap: initial !important;
+    word-break: initial !important;
+}
+
+/* Timer */
+
+#divContainerChartCountDown{
+    height:initial !important;
+}
+
+#divCountText, #divCountDown{
+    position: fixed !important;
+    padding-right: 40px !important;
+    right: 0px !important;
+    text-align: right !important;
+    left: initial !important;
+
+    margin: -15px 20px 50px !important;
+}
+
+#divCountText{
+    color:#fff !important;
+}
+#divCountText span,
+#divCountText h1{
+    color:#007cb7 !important;
+}
+
+#divCountDown{
+    margin-top: 40px !important;
+}
+
+/* Chart */
+
+#chartContainer text{
+    font-size: 22px !important;
+}
