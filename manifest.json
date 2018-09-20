@@ -1,19 +1,20 @@
 {
 
-  "description": "Apply CSS and JS to the quiz application on cyberlearn.hes-so.ch to improve presentation for projector (best in 16:9)",
+  "description": "Apply CSS and JS to the vote application on cyberlearn.hes-so.ch to improve presentation for projector",
   "manifest_version": 2,
-  "name": "cyberlearn-quiz-mode",
+  "author": "Media Engineering Institute",
+  "name": "cyberlearn-vote-beamer-mode",
   
-  "version": "1.0",
-  "homepage_url": "https://github.com/MediaComem/cyberlearn-quiz-for-beamer",
+  "version": "1.2",
+  "homepage_url": "https://github.com/MediaComem/cyberlearn-vote-beamer-mode",
 
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["browser-polyfill.min.js", "background.js"],
+    "persistent": false
   },
 
   "page_action": {
-    "default_icon": "icons/off.svg",
-    "browser_style": true
+    "default_icon": "icons/off.svg"
   },
   
   "permissions": [
