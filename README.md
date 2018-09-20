@@ -15,4 +15,4 @@ When the plugin is activated by clicking on the toggle button next to adress bar
 
 Simply intall the addons for your browser:
 
-Firefox: [https://addons.mozilla.org/fr/firefox/addon/cyberlearn-hes-so-quiz-beamer/](https://addons.mozilla.org/fr/firefox/addon/cyberlearn-hes-so-quiz-beamer/)
+Firefox: [https://addons.mozilla.org/fr/firefox/addon/cyberlearn-vote-beamer/](https://addons.mozilla.org/fr/firefox/addon/cyberlearn-vote-beamer/)
