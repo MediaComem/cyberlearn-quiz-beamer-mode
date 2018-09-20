@@ -1,7 +1,26 @@
-const TITLE_APPLY = "Apply Quiz mode";
-const TITLE_REMOVE = "Remove Quiz mode";
+const TITLE_APPLY = "Démarrer le mode Beamer";
+const TITLE_REMOVE = "Stopper le mode Beamer";
 const APPLICABLE_PROTOCOLS = ["http:", "https:"];
 var quizMode = false;
+var browserDetected = 'Firefox';
+
+/*
+Detection of browser
+*/
+
+try{
+  var gettingInfo = browser.runtime.getBrowserInfo();
+
+  gettingInfo.then((info) =>{
+      if(info.name != 'Firefox'){
+        throw error;
+      }
+  });
+}
+catch(error){
+  browserDetected = 'Other';
+}
+
 
 /*
 Toggle Mode: based on the current title, insert or remove the CSS.
@@ -14,14 +33,16 @@ function toggleMode(tab) {
       browser.pageAction.setIcon({tabId: tab.id, path: "icons/on.svg"});
       browser.pageAction.setTitle({tabId: tab.id, title: TITLE_REMOVE});
       quizMode = true;
-
-      if (protocolIsApplicable(tab.url) && urlIsApplicable(tab.url)) {
-        browser.tabs.insertCSS({file: "quizStyle.css"});
-      }
+      browser.tabs.insertCSS({file: "quizStyle.css"});
     } else {
       browser.pageAction.setIcon({tabId: tab.id, path: "icons/off.svg"});
       browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
-      browser.tabs.removeCSS({file: "quizStyle.css"});
+      if(browserDetected == 'Firefox'){
+        browser.tabs.removeCSS({file: "quizStyle.css"});
+      } else{
+        browser.tabs.reload();
+      }
+      
       quizMode = false;
     }
   }
@@ -51,7 +72,7 @@ Initialize the page action: set icon and title, then show.
 Only operates on tabs whose URL's protocol is applicable.
 */
 function initializePageAction(tab) {
-  
+  if (protocolIsApplicable(tab.url) && urlIsApplicable(tab.url)) {
     if(quizMode){
       browser.pageAction.setIcon({tabId: tab.id, path: "icons/on.svg"});
       browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
@@ -63,6 +84,7 @@ function initializePageAction(tab) {
       browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
       browser.pageAction.show(tab.id);
     }
+  }
 }
 
 /*
