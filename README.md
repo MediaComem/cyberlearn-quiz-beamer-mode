@@ -9,7 +9,7 @@
 
 ## What it does
 
-When the plugin is activated by clicking on the toggle button next to adress bar, the quiz showed on cyberlearn.hes-so.ch are cleaned and improved to be used on a projector. Depending on the contents of the questions, the user may need to use the zoom feature of his browser.
+When the plugin is activated by clicking on the toggle button next to adress bar, the quiz ("vote électronique") showed on cyberlearn.hes-so.ch are cleaned and improved to be used on a projector. Depending on the contents of the questions, the user may need to use the zoom feature of his browser.
 
 ## How to use
 
