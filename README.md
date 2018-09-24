@@ -15,6 +15,6 @@ When the plugin is activated by clicking on the toggle button next to adress bar
 
 Simply intall the addons for your browser:
 
-Firefox: [https://addons.mozilla.org/fr/firefox/addon/cyberlearn-vote-beamer/](https://addons.mozilla.org/fr/firefox/addon/cyberlearn-vote-beamer/)
+Firefox: [https://github.com/MediaComem/cyberlearn-vote-beamer-mode/releases](https://github.com/MediaComem/cyberlearn-vote-beamer-mode/releases)
 
 Chrome: [https://chrome.google.com/webstore/detail/cyberlearn-vote-beamer-mo/](https://chrome.google.com/webstore/detail/cyberlearn-vote-beamer-mo/fcmkabkgnffhgnjlgmeejniilbpppenp)
