@@ -5,7 +5,7 @@
   "author": "Media Engineering Institute",
   "name": "cyberlearn-vote-beamer-mode",
   
-  "version": "1.4.1",
+  "version": "1.5",
   "homepage_url": "https://github.com/MediaComem/cyberlearn-vote-beamer-mode",
 
   "background": {
@@ -22,6 +22,7 @@
   "permissions": [
     "activeTab",
     "tabs",
+    "storage",
     "*://cyberlearn.hes-so.ch/mod/evoting/*"
   ]
 

@@ -1,8 +1,22 @@
 const TITLE_APPLY = "Démarrer le mode Beamer";
 const TITLE_REMOVE = "Stopper le mode Beamer";
 const APPLICABLE_PROTOCOLS = ["http:", "https:"];
-var quizMode = false;
+console.log('started');
+/* Default option */
+saveQuizMode(false);
 var browserDetected = 'Firefox';
+
+function saveQuizMode(value) {
+  browser.storage.local.set({
+    quizMode: value
+  });
+}
+
+function getQuizMode() {
+  var gettingItem = browser.storage.local.get('quizMode');
+  
+  return gettingItem.then((res) => res.quizMode );
+}
 
 /*
 Detection of browser
@@ -32,7 +46,7 @@ function toggleMode(tab) {
     if (title === TITLE_APPLY) {
       browser.pageAction.setIcon({tabId: tab.id, path: "icons/on.svg"});
       browser.pageAction.setTitle({tabId: tab.id, title: TITLE_REMOVE});
-      quizMode = true;
+      saveQuizMode(true);
       browser.tabs.insertCSS({file: "quizStyle.css"});
     } else {
       browser.pageAction.setIcon({tabId: tab.id, path: "icons/off.svg"});
@@ -42,8 +56,8 @@ function toggleMode(tab) {
       } else{
         browser.tabs.reload();
       }
-      
-      quizMode = false;
+
+      saveQuizMode(false);
     }
   }
 
@@ -73,17 +87,21 @@ Only operates on tabs whose URL's protocol is applicable.
 */
 function initializePageAction(tab) {
   if (protocolIsApplicable(tab.url) && urlIsApplicable(tab.url)) {
-    if(quizMode){
-      browser.pageAction.setIcon({tabId: tab.id, path: "icons/on.svg"});
-      browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
-      browser.pageAction.show(tab.id);
-      toggleMode(tab);
-    }
-    else{
-      browser.pageAction.setIcon({tabId: tab.id, path: "icons/off.svg"});
-      browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
-      browser.pageAction.show(tab.id);
-    }
+
+    getQuizMode().then((isOn) => {
+
+      if(isOn){
+        browser.pageAction.setIcon({tabId: tab.id, path: "icons/on.svg"});
+        browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
+        browser.pageAction.show(tab.id);
+        toggleMode(tab);
+      }
+      else{
+        browser.pageAction.setIcon({tabId: tab.id, path: "icons/off.svg"});
+        browser.pageAction.setTitle({tabId: tab.id, title: TITLE_APPLY});
+        browser.pageAction.show(tab.id);
+      }
+    });
   }
 }
 
