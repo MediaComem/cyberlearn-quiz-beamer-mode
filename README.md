@@ -3,8 +3,8 @@
 **This add-on injects CSS to improve the vote mode in moodle and particularly on the platform cyberlearn.hes-so.ch**
 
 | ![Desactivated](https://blog.comem.ch/wp-content/uploads/2018/09/quiz_beamer_mode_desactivated.png) | ![https://blog.comem.ch/wp-content/uploads/2018/09/quiz_beamer_mode_activated.png](https://blog.comem.ch/wp-content/uploads/2018/09/quiz_beamer_mode_activated.png) |
-| -------- | -------- | 
-| Before     | After   | 
+| -------- | -------- |
+| Before     | After   |
 
 
 ## What it does
@@ -17,4 +17,4 @@ Simply intall the addons for your browser:
 
 Firefox: [https://github.com/MediaComem/cyberlearn-vote-beamer-mode/releases](https://github.com/MediaComem/cyberlearn-vote-beamer-mode/releases)
 
-Chrome: [https://chrome.google.com/webstore/detail/cyberlearn-vote-beamer-mo/](https://chrome.google.com/webstore/detail/cyberlearn-vote-beamer-mo/fcmkabkgnffhgnjlgmeejniilbpppenp)
+Chrome: [https://chrome.google.com/webstore/detail/cyberlearn-vote-beamer-mo/fcmkabkgnffhgnjlgmeejniilbpppenp](https://chrome.google.com/webstore/detail/cyberlearn-vote-beamer-mo/fcmkabkgnffhgnjlgmeejniilbpppenp)
