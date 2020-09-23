@@ -4,8 +4,8 @@
   "manifest_version": 2,
   "author": "Media Engineering Institute",
   "name": "cyberlearn-vote-beamer-mode",
-  
-  "version": "1.5",
+
+  "version": "1.6",
   "homepage_url": "https://github.com/MediaComem/cyberlearn-vote-beamer-mode",
 
   "background": {
@@ -18,7 +18,7 @@
       "32": "icons/off32.png"
     }
   },
-  
+
   "permissions": [
     "activeTab",
     "tabs",
